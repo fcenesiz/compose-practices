@@ -24,22 +24,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val painter = painterResource(id = R.drawable.kermit)
-            val description = "Kermit is playing in the forest"
-            val title = "Kermit is playing in the forest"
-
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(0.5f)
-                    .padding(16.dp)
-            ) {
-                ImageCard(
-                    painter = painter,
-                    contentDescription = description,
-                    title = title
-                )
-            }
-
+            ContentStylingText()
         }
     }
 }

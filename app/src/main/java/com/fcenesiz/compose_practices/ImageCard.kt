@@ -13,9 +13,29 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+@Composable
+fun ContentImageCard(){
+    val painter = painterResource(id = R.drawable.kermit)
+    val description = "Kermit is playing in the forest"
+    val title = "Kermit is playing in the forest"
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.5f)
+            .padding(16.dp)
+    ) {
+        ImageCard(
+            painter = painter,
+            contentDescription = description,
+            title = title
+        )
+    }
+}
 
 @Composable
 fun ImageCard(
