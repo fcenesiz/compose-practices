@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.fcenesiz.compose_practices.ui.theme.ComposePracticesTheme
@@ -23,27 +24,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column(
+            val painter = painterResource(id = R.drawable.kermit)
+            val description = "Kermit is playing in the forest"
+            val title = "Kermit is playing in the forest"
+
+            Box(
                 modifier = Modifier
-                    .background(Color.LightGray)
-                    .fillMaxHeight(0.5f)
-                    .fillMaxWidth()
-                    .border(2.dp, Color.Magenta)
+                    .fillMaxWidth(0.5f)
                     .padding(16.dp)
-                    .border(2.dp, Color.Green)
-                    .padding(16.dp)
-                    .border(4.dp, Color.Yellow)
-                    .padding(8.dp)
             ) {
-                Text(
-                    "Hello", modifier = Modifier
-                        .border(5.dp, Color.Red)
-                        .padding(10.dp)
-                        .clickable { }
+                ImageCard(
+                    painter = painter,
+                    contentDescription = description,
+                    title = title
                 )
-                Spacer(modifier = Modifier.height(50.dp))
-                Text("World")
             }
+
         }
     }
 }
