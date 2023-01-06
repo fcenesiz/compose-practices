@@ -4,7 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -22,31 +25,26 @@ class MainActivity : ComponentActivity() {
         setContent {
             Column(
                 modifier = Modifier
-                    .fillMaxSize(1f)
-                    .background(Color.DarkGray),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    .background(Color.LightGray)
+                    .fillMaxHeight(0.5f)
+                    .fillMaxWidth()
+                    .border(2.dp, Color.Magenta)
+                    .padding(16.dp)
+                    .border(2.dp, Color.Green)
+                    .padding(16.dp)
+                    .border(4.dp, Color.Yellow)
+                    .padding(8.dp)
             ) {
-                Title()
                 Text(
-                    color = Color.White,
-                    text = "This is test 1"
+                    "Hello", modifier = Modifier
+                        .border(5.dp, Color.Red)
+                        .padding(10.dp)
+                        .clickable { }
                 )
-                Text(text = "This is text 2")
-
+                Spacer(modifier = Modifier.height(50.dp))
+                Text("World")
             }
-
         }
     }
 }
 
-@Composable
-fun Title() {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceEvenly
-    ) {
-        Text(text = "Compose is")
-        Text(text = "very Cool!")
-    }
-}
