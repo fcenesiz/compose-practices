@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.fcenesiz.compose_practices'
+    namespace 'com.fcenesiz.effect_handlers'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.fcenesiz.compose_practices"
+        applicationId "com.fcenesiz.effect_handlers"
         minSdk 26
         targetSdk 33
         versionCode 1

@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Compose Practices"
-include ':app'
+include ':compose-basics'
+include ':effect-handlers'
