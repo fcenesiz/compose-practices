@@ -18,13 +18,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.fcenesiz.compose_practices.custom.ContentAnimatedCircularProgressBar
 import com.fcenesiz.compose_practices.ui.theme.ComposePracticesTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ContentSimpleAnimations()
+            ContentAnimatedCircularProgressBar()
         }
     }
 }
