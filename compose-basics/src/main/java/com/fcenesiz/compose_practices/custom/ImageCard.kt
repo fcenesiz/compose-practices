@@ -1,4 +1,4 @@
-package com.fcenesiz.compose_practices
+package com.fcenesiz.compose_practices.custom
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -17,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.fcenesiz.compose_practices.R
 
 @Composable
 fun ContentImageCard(){
